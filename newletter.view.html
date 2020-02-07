@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="forms.controller.js"></script>
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <title>Form Letter</title>
+</head>
+<style>
+
+    table {
+        width: 100%;
+        border-spacing: 0;
+
+    }
+
+    tbody,
+    thead tr {
+        display: block;
+    }
+
+    tbody {
+        height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    tbody td,
+    thead th {
+        width: 500px;
+    }
+
+    thead th:last-child {
+        width: 156px;
+    }
+
+    .td1 {
+        width: 100px;
+        border-style: bold;
+    }
+
+    .td2 {
+        width: 100px;
+    }
+
+    .td3 {
+        width: 600px;
+    }
+
+    /* width */
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .inp {
+        width: 100%;
+    }
+
+    .lb {
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    .add_wrap {
+        width: 600px;
+        height: 600px;
+    }
+
+    .tb4 {
+        margin-left: 10%;
+
+
+
+    }
+
+    .na {
+        font-family: "Charlemagne Std";
+        font-size: 18pt;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="na">FormLetter</div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div ng-app="myApp" ng-controller="cntrl">
+
+        <div class="col-10" style="float:left">
+            <input type="button" value="Load" class="btn btn-success" ng-click="loadForms()">
+
+
+            <table class="tb1_1 table table-bordered table-striped">
+
+                <tr>
+                    <th>FormId</th>
+                    <th>FormName</th>
+                    <th>FormText</th>
+                    <th>Function</th>
+                </tr>
+
+                <tr ng-repeat="form in list">
+
+                    <td class="td1">{{form.FormID}}</td>
+                    <td>
+                        <input class="td2" name="formName" type="text" ng-model="form.FormName" required/>
+                    </td>
+                    <td>
+                        <input class="td3" name="formText" type="text" ng-model="form.FormText" required/>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-success" ng-click="deleteForms(form)">Delete </button>
+                        <button type="submit" class="btn btn-success" ng-click="updateForms(form)">Edit</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="col-2" style="float:right">
+
+            <button type="submit" class="btn btn-success" ng-click="loadMerges()">Load</button>
+            <table class="table table-bordered table-striped">
+
+                <tr>
+                    <th>FormFields</th>
+                </tr>
+
+                <tr ng-repeat="fields in merge">
+                    <td>{{fields.MergeField}}</td>
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <form class="add_wrap">
+            <table class="table table-striped  tb4">
+                <tr>
+                    <th>
+                        <label class="lb" for="formName">Name </label>
+                    </th>
+                    <th>
+                        <label class="lb" for="formText">Text</label>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="formName" type="text" ng-model="formName" required/>
+                    </td>
+                    <td>
+                        <textarea rows="2" cols='80' name="formText" type="text" ng-model="formText" required></textarea>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-primary" ng-click="insertForms(formName,formText)">ADD</button>
+                    </td>
+                </tr>
+
+                <table>
+        </form>
+
+
+
+</body>
+
+</html>

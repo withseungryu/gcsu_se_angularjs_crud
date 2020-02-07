@@ -1,0 +1,12 @@
+[
+  {
+    "formID": "2",
+    "formName": "Rejected",
+    "formText": "We regret to inform you that you have not been accepted, {lastname}.\n        "
+  },
+  {
+    "formID": "18",
+    "formName": "CallBack",
+    "formText": "Please call back, {lastname}.\n        \n        \n        "
+  }]
+

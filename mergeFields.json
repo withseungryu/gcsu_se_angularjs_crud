@@ -1,0 +1,100 @@
+[
+    {
+        "FormFieldID": "1",
+        "TableName": "tblAppPeople",
+        "ColumnName": "PSalutation",
+        "MergeField": "{salutation}",
+        "Description": "Salutation"
+    },
+    {
+        "FormFieldID": "2",
+        "TableName": "tblAppPeople",
+        "ColumnName": "PersonFN",
+        "MergeField": "{firstname}",
+        "Description": "First Name"
+    },
+    {
+        "FormFieldID": "3",
+        "TableName": "tblAppPeople",
+        "ColumnName": "PGenQualifier",
+        "MergeField": "{gen_qualifier}",
+        "Description": "Generation Qualifier"
+    },
+    {
+        "FormFieldID": "4",
+        "TableName": "tblAppPeople",
+        "ColumnName": "PersonLN",
+        "MergeField": "{lastname}",
+        "Description": "Last Name"
+    },
+    {
+        "FormFieldID": "5",
+        "TableName": "tblAppPeople",
+        "ColumnName": "PMailAddress",
+        "MergeField": "{mail_address}",
+        "Description": "Mailing Address"
+    },
+    {
+        "FormFieldID": "6",
+        "TableName": "tblAppPeople",
+        "ColumnName": "PMailAddress2",
+        "MergeField": "{mail_address2}",
+        "Description": "Mailing Address 2"
+    },
+    {
+        "FormFieldID": "7",
+        "TableName": "tblAppPeople",
+        "ColumnName": "PMailCity",
+        "MergeField": "{mail_city}",
+        "Description": "City"
+    },
+    {
+        "FormFieldID": "8",
+        "TableName": "tblAppPeople",
+        "ColumnName": "PState",
+        "MergeField": "{mail_state}",
+        "Description": " State"
+    },
+    {
+        "FormFieldID": "9",
+        "TableName": "tblAppPeople",
+        "ColumnName": "PZip",
+        "MergeField": "{mail_zip}",
+        "Description": "Zip"
+    },
+    {
+        "FormFieldID": "10",
+        "TableName": "tblAppGuardians",
+        "ColumnName": "Guardian",
+        "MergeField": "{guardian_name}",
+        "Description": "Guardian"
+    },
+    {
+        "FormFieldID": "11",
+        "TableName": "tblAppContacts",
+        "ColumnName": "ContactInfo",
+        "MergeField": "{guardian_contact}",
+        "Description": "Guardian Contact Info"
+    },
+    {
+        "FormFieldID": "12",
+        "TableName": "tblAppContacts",
+        "ColumnName": "ContactInfo",
+        "MergeField": "{email}",
+        "Description": "Email"
+    },
+    {
+        "FormFieldID": "13",
+        "TableName": "tblAppContacts",
+        "ColumnName": "ContactInfo",
+        "MergeField": "{guardian_email}",
+        "Description": "Guardian Email"
+    },
+    {
+        "FormFieldID": "14",
+        "TableName": "tblAppContacts",
+        "ColumnName": "ContactInfo",
+        "MergeField": "{contact}",
+        "Description": "Contact Info"
+    }
+]
