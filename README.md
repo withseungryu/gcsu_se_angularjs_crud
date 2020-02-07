@@ -1,2 +1,2 @@
-# gcsu_se_anularjs_crud
-gcsu software engineering anularjs CRUD 실습
+# gcsu_se_angularjs_crud
+gcsu software engineering angularjs CRUD 실습
